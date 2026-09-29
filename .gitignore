@@ -1,0 +1,19 @@
+# --- secretos / credenciales: NUNCA subir esto ---
+.env
+.env.*
+*.pem
+.slack_installations/
+.slack_oauth_state/
+
+# --- entorno Python ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# --- otros ---
+.DS_Store
+dist/
+build/
