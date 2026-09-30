@@ -1,0 +1,6 @@
+{
+  "name": "MediFlow - Sistema Autónomo de Triaje Clínico",
+  "description": "Plataforma de triaje clínico autónomo determinístico con ingesta HL7 FHIR, revisión humana asistida, alertas de urgencia y trazabilidad inmutable.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
