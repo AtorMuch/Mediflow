@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+.material-symbols-outlined.fill-1 {
+  font-variation-settings: 'FILL' 1;
+}
+
+@keyframes scan-line {
+  0% { top: 0%; opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { top: 96%; opacity: 0.8; }
+}
+
+.animate-scan-line {
+  animation: scan-line 3.2s infinite ease-in-out alternate;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-intense {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(217, 69, 69, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(217, 69, 69, 0);
+  }
+}
+
+.pulsing-alert-ring {
+  animation: pulse-intense 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes beacon-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.85); }
+}
+
+.beacon-pulse {
+  animation: beacon-dot 1s ease-in-out infinite;
+}
+
+@keyframes live-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-active {
+  background: linear-gradient(90deg, rgba(235, 245, 242, 0.6) 25%, rgba(142, 209, 164, 0.45) 50%, rgba(235, 245, 242, 0.6) 75%);
+  background-size: 200% 100%;
+  animation: live-shimmer 2s infinite ease-in-out;
+}
+
+/* Custom scrollbars for clinical HUD */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(30, 90, 82, 0.05);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(30, 90, 82, 0.25);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 90, 82, 0.45);
+}
